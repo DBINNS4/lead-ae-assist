@@ -1,7 +1,7 @@
 
 # 🎬 Lead AE Assist Beta v1.0
 
-Lead AE Assist Beta v1.0 is a professional-grade, modular desktop app built to automate ingesting, transcoding, and managing media workflows. Your assistant for smart ingest, prep, and project organization — made for AEs.
+Lead AE Assist Beta v1.0 is a professional-grade, modular desktop app built to automate ingesting, transcoding, and managing media workflows. Your assistant for smart ingest, prep, and project organization - made for Post Production.
 
 ---
 
@@ -9,14 +9,8 @@ Lead AE Assist Beta v1.0 is a professional-grade, modular desktop app built to a
 
 - ✅ Modular panels: Ingest, Transcode, and more
 - ✅ Silent license-based feature gating
-- ✅ Cross-platform (macOS, Windows, Linux)
-- ✅ FFmpeg-powered transcoding with AI-enhanced suggestions
+- ✅ FFmpeg-powered transcoding
 - ✅ Multi-TB ingest ready with hashing, deduplication, and retry
-- ✅ Real-time preview with crop, LUT, and in/out markers
-- ✅ New Transcribe panel for speech-to-text
-- ✅ JSON/Avid transcriptions use OpenAI's verbose_json for detailed segments
-- 📄 [FFmpeg Build Plan](docs/FFmpeg_Build_Plan.md) lists the bundled codecs and containers
-- 📄 [Transcription and Reconciliation](docs/transcription.md) covers dual-engine flags, workflow, and outputs
 
 ---
 
@@ -77,32 +71,15 @@ in your signing configuration. Without it, Electron will fail to launch.
 - AI format suggestion and retry logic
 - Unified summary with per-file progress bar
 
-### 🔹 Transcribe
-- Enable `dualEngine` to run both Lead AE Assist Beta v1.0 and WhisperX for cross-checking results.
-- Use `preferEngine` to choose which engine's words are kept when reconciling.
-- `autoConfidence` automatically accepts the higher-confidence word during reconciliation.
-- Outputs include TXT, SRT, VTT, JSON, XML, script, and burn-in subtitle files.
-- A reconciliation overlay highlights discrepancies so you can review or apply preferences quickly.
-
 ### Quick Tips
 - Use the **Reset** button on any panel to clear all fields.
   Drop-down menus return to a simple "-- Select --" prompt so you can start over.
-
-
-## 🧠 AI Integration
-
-Commands like:
-- “Transcode for Instagram”
-- “Ingest this to MXF and prep for Avid”
-- “Retry failed files with CRF 18”
 
 ---
 
 ## 🔒 Licensing
 
 Edit `state.json` in your application data folder to change access and manage preferences:
-
-"licenseTier": "pro"
 
 Tiers: free, pro, enterprise  
 Features silently lock if unavailable.
